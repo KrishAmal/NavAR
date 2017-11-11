@@ -7,9 +7,10 @@ NavAR is a Location Based Augmented Reality Android App . It uses the [BeyondAR]
 * Augmented Reality Point of Interest Browser
 * Augmented Reality Navigation
 
-
-
 ## Prerequisite
+```
+Insert Google Maps API Key at /app/src/release/res/values/google_maps_api.xml
+```
 
 ## Screenshots
 
