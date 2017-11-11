@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="4dp"
+    android:id="@+id/nav_coord_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/card_border"
+                card_view:cardCornerRadius="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_border"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/source_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:paddingEnd="10dp"
+                        android:src="@drawable/navigation_stroke"
+                        android:tint="#ff4081" />
+
+                    <LinearLayout
+                        android:id="@+id/source_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/source_icon"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/source_select_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:text="Source"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/source_result_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/source_select_text"
+                            android:text="Nothing Selected" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/source_pick_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/button_bg"
+                        android:text="SELECT"
+                        android:textColor="#FFF" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                card_view:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_border"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/dest_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="10dp"
+                    android:src="@drawable/navigation_stroke"
+                    android:tint="#536dfe"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/dest_icon"
+                    android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/dest_select_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Destination"/>
+
+                <TextView
+                    android:id="@+id/dest_result_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dest_select_text"
+                    android:text="Nothing Selected"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/dest_pick_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:textColor="#FFF"
+                    android:text="SELECT"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="50dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:padding="8dp"
+                        android:background="@drawable/startar_btn_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:text="Start AR Navigation "
+                            android:paddingBottom="4dp"/>
+
+                       <Button
+                            android:id="@+id/nav_start_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_bg"
+                            android:textColor="#FFF"
+                            android:layout_gravity="center_horizontal"
+                            android:text="BEGIN" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerHorizontal="true"
+                        android:padding="8dp"
+                        android:layout_marginTop="160dp"
+                        android:background="@drawable/startar_btn_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:paddingBottom="4dp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Start Maps Navigation " />
+
+                        <Button
+                            android:id="@+id/non_ar_nav_start_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_bg"
+                            android:backgroundTint="#4a148c"
+                            android:textColor="#FFF"
+                            android:layout_gravity="center_horizontal"
+                            android:text="BEGIN" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:elevation="-1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/nav_footer_image"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

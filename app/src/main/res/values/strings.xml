@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">NavAR</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="directions_base_url">https://maps.googleapis.com/</string>
+
+    <!--App OnBoarding-->
+    <string name="slide1_title">Welcome</string>
+    <string name="slide1_desc">NavAR is an Location Based Augmented Reality Navigation Application .
+                    Easy to use , Realtime and Fun !</string>
+
+    <string name="slide2_title">Augmented Reality Navigation</string>
+    <string name="slide2_desc">Realtime AR navigation to the destination of your choice . Follow the Dots to reach your destination</string>
+
+    <string name="slide3_title">Augmented Reality Point of Interest Browser</string>
+    <string name="slide3_desc">View Places around you in AR and in realtime </string>
+
+    <string name="lato_light">fonts/Lato-Light.ttf</string>
+
+    <!--POI Names-->
+    <string name="atm">atm</string>
+    <string name="hosp">hospital</string>
+    <string name="logding">lodging</string>
+    <string name="movie">Movie Theater</string>
+    <string name="restaurant">restaurant</string>
+    <string name="cafe">cafe</string>
+    <string name="bakery">bakery</string>
+    <string name="bus">Bus Station</string>
+    <string name="lib">library</string>
+    <string name="mall">Shopping Mall</string>
+    <string name="taxi">Taxi Stand</string>
+    <string name="pharmacy">pharmacy</string>
+    <string name="park">park</string>
+    <string name="parking">parking</string>
+
+
+
+</resources>

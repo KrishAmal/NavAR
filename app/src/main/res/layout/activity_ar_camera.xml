@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/arcam_layout">
+
+    <fragment
+        android:id="@+id/ar_cam_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.univ.team12.navar.ar.ArFragmentSupport">
+        </fragment>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cam_grad_top"/>
+
+        <TextView
+            android:id="@+id/ar_source_dest"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Source -> Destination"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/src_dest_bg"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/cam_grad_bottom"
+            android:id="@+id/ar_view" />
+
+        <TextView
+            android:id="@+id/ar_dir_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Dist"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/src_dest_bg"/>
+
+        <TextView
+            android:id="@+id/ar_dir_time"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="time"
+            android:layout_marginRight="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/src_dest_bg"
+            android:layout_alignBaseline="@+id/ar_dir_distance"
+            android:layout_alignBottom="@+id/ar_dir_distance"
+            android:layout_toStartOf="@+id/ar_dir_distance" />
+    </RelativeLayout>
+
+</FrameLayout>

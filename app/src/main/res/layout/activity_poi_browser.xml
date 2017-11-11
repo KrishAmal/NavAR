@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_layout">
+
+
+    <ProgressBar
+        android:id="@+id/poi_brwoser_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="3dp"/>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/poi_place_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:layout_gravity="center"
+        android:elevation="2dp"
+        app:cardCornerRadius="8dp">
+
+        <ImageButton
+            android:id="@+id/poi_place_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:src="@drawable/places_ic_clear"
+            android:elevation="2dp"
+            android:layout_gravity="end|top" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/poi_place_image"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/poi_place_image"/>
+
+            <RelativeLayout
+                android:id="@+id/poi_name_addr_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/poi_place_image"
+                android:paddingStart="30dp"
+                android:paddingBottom="35dp">
+
+                <TextView
+                    android:id="@+id/poi_place_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAME"
+                    android:textColor="#000"
+                    android:maxLines="2"
+                    android:textSize="28sp"
+                    android:paddingTop="40dp"/>
+
+                <TextView
+                    android:id="@+id/poi_place_address"
+                    android:layout_below="@id/poi_place_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:maxLines="3"
+                    android:textSize="20sp"
+                    android:paddingTop="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/poi_cardview_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/poi_place_image"
+                android:layout_below="@id/poi_name_addr_group"
+                android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2e2e2"/>
+
+            <Button
+                android:id="@+id/poi_place_ar_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AR DIRECTION"
+                android:textSize="20sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="#00000000"/>
+
+            <Button
+                android:id="@+id/poi_place_maps_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAPS DIRECTION"
+                android:textSize="20sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="185dp"
+                android:textColor="@color/colorAccent"
+                android:background="#00000000"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <fragment
+        android:id="@+id/poi_cam_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.univ.team12.navar.ar.ArFragmentSupport">
+    </fragment>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/cam_grad_top"/>
+
+    <TextView
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:text="Loading Nearby Point of Interests"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="20sp"
+        android:layout_marginTop="95dp"
+        android:background="@drawable/src_dest_bg"
+        android:textColor="#FFF"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/cam_view"
+        android:background="@drawable/cam_grad_bottom"
+        android:id="@+id/view" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/seekbar_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance"
+                    android:textColor="@color/colorAccent" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:max="4"
+                    android:progress="2" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

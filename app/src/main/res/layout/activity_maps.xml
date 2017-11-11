@@ -1,0 +1,140 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressBar_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="1dp"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.univ.team12.navar.MapsActivity" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/decode_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textSize="14sp"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/username_text_input_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/decode_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:hint="Geocoding"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="#bdbdbd" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/decode_btn"
+                android:layout_width="50dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:background="@drawable/places_ic_search"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:paddingBottom="8dp"
+        android:paddingEnd="8dp"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="#5e35b1"
+        app:menu_colorRipple="#a183f4"
+        app:menu_icon="@drawable/menu"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/about_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="#630073"
+            app:fab_colorRipple="#e45cfa"
+            app:fab_size="mini"
+            app:fab_label="About"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/poi_browser_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map_marker"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="#630073"
+            app:fab_colorRipple="#e45cfa"
+            app:fab_size="mini"
+            app:fab_label="POI Browser"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/ar_nav_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="#630073"
+            app:fab_colorRipple="#e45cfa"
+            android:src="@drawable/navigation"
+            app:fab_size="mini"
+            app:fab_label="AR Navigation"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/directions"-->
+        <!--android:clickable="true"-->
+        <!--app:layout_anchor="@id/map"-->
+        <!--app:layout_anchorGravity="bottom|right|end"-->
+        <!--app:fabSize="normal"/>-->
+
+</android.support.design.widget.CoordinatorLayout>
