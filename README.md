@@ -23,6 +23,6 @@ Insert Google Maps API Key at /app/src/release/res/values/google_maps_api.xml
 #### AR Point of Interest Browser
 <img src="screenshots/5.jpg" height="230"/> <img src="screenshots/11.png" height="230"/> 
 
-#### AR Navigation Screen (1/3)
+#### AR Navigation Screen
 <img src="screenshots/3.png" width="230"/> <img src="screenshots/4.png" width="230"/> <img src="screenshots/12.png" width="230"/> <img src="screenshots/13.png" width="230"/> <img src="screenshots/6.jpg" height="300"/>
 
