@@ -26,3 +26,15 @@ Insert Google Maps API Key at /app/src/release/res/values/google_maps_api.xml
 #### AR Navigation Screen
 <img src="screenshots/3.png" width="230"/> <img src="screenshots/4.png" width="230"/> <img src="screenshots/12.png" width="230"/> <img src="screenshots/13.png" width="230"/> <img src="screenshots/6.jpg" height="300"/>
 
+## Dependencies
+* [Google Play Services](https://developers.google.com/android/guides/overview)
+* [Android Map Utils](https://github.com/googlemaps/android-maps-utils)
+* [Retrofit](https://github.com/square/retrofit)
+* [ButterKnife](https://github.com/JakeWharton/butterknife) 
+* [Gson](https://github.com/google/gson)
+* [AppIntro](https://github.com/apl-devs/AppIntro)
+
+## Contact me:
+[Primary Website](http://Amalkrishnan.me)
+
+[Twitter](https://twitter.com/amal_krish)
